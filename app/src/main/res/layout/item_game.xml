@@ -1,0 +1,89 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/modern_surface"
+    android:layout_margin="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <!-- Icono del libro -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/modern_primary_light">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_book"
+                app:tint="@color/modern_primary" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Información del libro -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Título del Libro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/modern_text_primary"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tvGameGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Género Literario"
+                android:textSize="14sp"
+                android:textColor="@color/modern_text_secondary"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <RatingBar
+                android:id="@+id/ratingBarItem"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:progressTint="@color/modern_accent"
+                android:secondaryProgressTint="@color/modern_accent_light" />
+
+        </LinearLayout>
+
+        <!-- Indicador de estado -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="8dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/modern_secondary">
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

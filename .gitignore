@@ -63,7 +63,7 @@ captures/
 # ⚠️ IMPORTANTE: El google-services.json incluido es un PLACEHOLDER
 # Debes reemplazarlo con tu archivo real de Firebase
 # Si quieres ignorar tu archivo real (recomendado), descomenta la línea de abajo:
-# google-services.json
+google-services.json
 
 # Freeline
 freeline.py

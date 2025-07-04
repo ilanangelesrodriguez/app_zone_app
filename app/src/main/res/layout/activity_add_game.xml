@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/modern_gradient_bg">
+
+    <!-- AppBar moderna -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/modern_surface"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Agregar Libro"
+        app:titleTextColor="@color/modern_text_primary"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:navigationIconTint="@color/modern_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header con icono -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/modern_surface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="24dp"
+                    android:gravity="center_vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardCornerRadius="32dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/modern_primary">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add_book"
+                            app:tint="@color/white" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📚 Nuevo Libro"
+                            android:textSize="20sp"
+                            android:textColor="@color/modern_text_primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Agrega un libro a tu biblioteca personal"
+                            android:textSize="14sp"
+                            android:textColor="@color/modern_text_secondary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Formulario -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/modern_surface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <!-- Campo Título -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Título del libro"
+                        android:layout_marginBottom="20dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/modern_surface_variant"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxStrokeColor="@color/modern_primary"
+                        app:hintTextColor="@color/modern_text_secondary"
+                        app:startIconDrawable="@drawable/ic_book"
+                        app:startIconTint="@color/modern_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGameTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/modern_text_primary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Campo Género -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Género literario"
+                        android:layout_marginBottom="24dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/modern_surface_variant"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxStrokeColor="@color/modern_primary"
+                        app:hintTextColor="@color/modern_text_secondary"
+                        app:startIconDrawable="@drawable/ic_category"
+                        app:startIconTint="@color/modern_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGameGenre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/modern_text_primary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Rating Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="28dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tu calificación: ⭐ 0/5"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/modern_text_primary"
+                            android:layout_marginBottom="12dp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="2dp"
+                            app:cardBackgroundColor="@color/modern_surface_variant">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="20dp"
+                                android:gravity="center">
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:rating="0"
+                                    android:stepSize="0.5"
+                                    android:progressTint="@color/modern_accent"
+                                    android:secondaryProgressTint="@color/modern_accent_light" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Botón Guardar -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSaveGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:text="GUARDAR EN BIBLIOTECA"
+                        android:backgroundTint="@color/modern_primary"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.02"
+                        app:cornerRadius="32dp"
+                        app:icon="@drawable/ic_save"
+                        app:iconTint="@color/white"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
